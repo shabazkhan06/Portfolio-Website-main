@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Services offered by Mohd Shabaz — Custom Website Development, AI Chatbot Solutions, WhatsApp Automation, Workflow Automation, and Full Stack Development." />
+    <meta name="keywords" content="mohd shabaz services, web development, AI chatbot, whatsapp automation, workflow automation, full stack developer" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Services CSS -->
+    <link rel="stylesheet" href="../assets/css/services.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon -->
+    <link id="favicon" rel="shortcut icon" href="../assets/images/image copy 2.png" type="image/x-png">
+
+    <title>Services | Portfolio Mohd Shabaz</title>
+
+    <style>
+        /* ── Page-level overrides for the standalone services page ── */
+        body {
+            background: #f7f7f7;
+        }
+
+        /* Services hero banner */
+        .services-hero {
+            background: linear-gradient(135deg, #10283a 0%, #1a36ff 100%);
+            padding: 14rem 2rem 6rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle, rgba(255,255,255,.08) 1px, transparent 1.5px);
+            background-size: 28px 28px;
+        }
+
+        .services-hero-label {
+            display: inline-flex;
+            align-items: center;
+            gap: .6rem;
+            padding: .5rem 1.4rem;
+            border: 1px solid rgba(255,255,255,.25);
+            border-radius: 99px;
+            color: rgba(255,255,255,.85);
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .services-hero h1 {
+            font-size: clamp(3.6rem, 6vw, 6.4rem);
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -.04em;
+            line-height: 1;
+            margin-bottom: 1.8rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .services-hero p {
+            max-width: 580px;
+            margin: 0 auto;
+            font-size: clamp(1.6rem, 2vw, 1.9rem);
+            color: rgba(255,255,255,.75);
+            line-height: 1.65;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Stats bar */
+        .services-stats {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            padding: 3rem 2rem;
+            background: #fff;
+            border-bottom: 1px solid #e2e8ee;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            display: block;
+            font-size: clamp(2.4rem, 4vw, 3.6rem);
+            font-weight: 800;
+            color: #1a36ff;
+            letter-spacing: -.03em;
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 1.35rem;
+            color: #53606b;
+            font-weight: 500;
+            margin-top: .3rem;
+            text-transform: capitalize;
+        }
+
+        /* Services content area */
+        .services-page-section {
+            background: #fff;
+        }
+
+        /* Back button */
+        .back-btn-wrap {
+            text-align: center;
+            padding: 4rem 2rem 6rem;
+            background: #fff;
+        }
+
+        .back-btn-wrap .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: .8rem;
+        }
+
+        /* CTA Section */
+        .services-cta {
+            background: linear-gradient(135deg, #1a36ff 0%, #10283a 100%);
+            padding: 7rem 2rem;
+            text-align: center;
+        }
+
+        .services-cta h2 {
+            font-size: clamp(2.8rem, 4vw, 4.2rem);
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -.03em;
+            margin-bottom: 1.4rem;
+            text-transform: none;
+        }
+
+        .services-cta p {
+            max-width: 500px;
+            margin: 0 auto 3rem;
+            font-size: 1.75rem;
+            color: rgba(255,255,255,.78);
+            line-height: 1.6;
+            text-transform: none;
+        }
+
+        .services-cta .btn {
+            background: #fff;
+            color: #1a36ff;
+            border: none;
+            padding: 1.3rem 3rem;
+            border-radius: 1rem;
+            font-size: 1.6rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: .8rem;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+        .services-cta .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 1.2rem 3rem rgba(0,0,0,.2);
+        }
+
+        @media (max-width: 600px) {
+            .services-stats {
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body oncontextmenu="return false">
+
+<!-- navbar starts -->
+<header>
+    <a href="/" class="logo"><i class="fab fa-node-js"></i> Shabaz</a>
+
+    <div id="menu" class="fas fa-bars"></div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/#home">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#skills">Skills</a></li>
+            <li><a href="/#education">Education</a></li>
+            <li><a href="/#work">Work</a></li>
+            <li><a href="/#experience">Experience</a></li>
+            <li><a class="active" href="/services">Services</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- navbar ends -->
+
+
+<!-- ── Hero Banner ── -->
+<div class="services-hero">
+    <div class="services-hero-label">
+        <i class="fas fa-rocket"></i> Premium Services
+    </div>
+    <h1>AI Solutions That<br>Scale Your Business</h1>
+    <p>I build intelligent automation systems, AI-powered customer experiences, scalable SaaS solutions, and business workflows that help companies grow faster.</p>
+</div>
+<!-- ── Hero Banner ends ── -->
+
+
+<!-- ── Stats Bar ── -->
+<div class="services-stats">
+    <div class="stat-item">
+        <span class="stat-value">50+</span>
+        <span class="stat-label">Projects Delivered</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-value">+340%</span>
+        <span class="stat-label">Client Growth</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-value">24/7</span>
+        <span class="stat-label">Support Active</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-value">5+</span>
+        <span class="stat-label">Years Experience</span>
+    </div>
+</div>
+<!-- ── Stats Bar ends ── -->
+
+
+<!-- ── Services Grid (React-mounted, same component as homepage) ── -->
+<div id="services-root" class="services-page-section"></div>
+<!-- ── Services Grid ends ── -->
+
+
+<!-- ── CTA Section ── -->
+<div class="services-cta">
+    <h2>Ready to Start a Project?</h2>
+    <p>Let's build something great together. Reach out and let's discuss your needs.</p>
+    <a href="/#contact" class="btn">
+        <i class="fas fa-paper-plane"></i>
+        <span>Get in Touch</span>
+    </a>
+</div>
+<!-- ── CTA Section ends ── -->
+
+
+<!-- footer section starts -->
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Shabaz Portfolio</h3>
+            <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> Keep Rising 🚀. Connect with me over live chat!</p>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="/#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+            <a href="/#about"><i class="fas fa-chevron-circle-right"></i> about</a>
+            <a href="/#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
+            <a href="/#education"><i class="fas fa-chevron-circle-right"></i> education</a>
+            <a href="/#work"><i class="fas fa-chevron-circle-right"></i> work</a>
+            <a href="/#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <p> <i class="fas fa-phone"></i>+91 XXX-XXX-XXXX</p>
+            <p> <i class="fas fa-envelope"></i>shabazkhan13356@gmail.com</p>
+            <p> <i class="fas fa-map-marked-alt"></i>Kanpur, India-209861</p>
+            <div class="share">
+                <a href="https://www.linkedin.com/in/mohdshabaz06/" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
+                <a href="https://github.com/shabazkhan06" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
+                <a href="mailto:shabazkhan13356@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
+                <a href="https://twitter.com/shabazkhan006" class="fab fa-twitter" aria-label="Twitter" target="_blank"></a>
+                <a href="https://t.me/shabazkhan006" class="fab fa-telegram-plane" aria-label="Telegram" target="_blank"></a>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/mohdshabaz06/"> Mohd Shabaz</a></h1>
+</section>
+<!-- footer section ends -->
+
+<!-- scroll top btn -->
+<a href="#" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Main script (handles navbar toggle, scroll-top, etc.) -->
+<script src="../assets/js/script.js"></script>
+
+<!-- React CDN (needed to mount the services component) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="../assets/js/services-react.js"></script>
+
+</body>
+</html>
