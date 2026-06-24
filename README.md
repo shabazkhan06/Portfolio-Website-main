@@ -55,7 +55,7 @@ Particle.js, Typed.js, Tilt.js, Scroll Reveal, Font Awesome, JSON
 ## 📬 Contact
 Feel free to connect with me through any of the platforms below.
 
-<p> <i class="fas fa-phone"></i> +91 8881123860</p>
+
 <p> <i class="fas fa-envelope"></i> Shabazkhan13356@gmail.com</p>
 <p> <i class="fas fa-map-marked-alt"></i> Kanpur, India-209861</p>
 
